@@ -15,7 +15,7 @@ node {
             }
         }
    }
-   stage('Run integration test') {
+   stage('Run functional test') {
         withEnv(['M3_HOME=/usr/local/bin']) {
             sh "'${M3_HOME}/mvn' -Dmaven.test.failure.ignore install"
         }
